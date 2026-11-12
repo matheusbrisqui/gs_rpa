@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "passo-livre-rpa"
+version = "1.0.0"
+description = "Automação de triagem e encaminhamento de relatos do Passo Livre (FIAP Global Solution 2026.2, RPA)"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27"]
+
+[project.scripts]
+passo-livre-rpa = "passo_livre_rpa.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "mvp"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore:.*starlette.testclient.*"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+src = ["src", "mvp"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003", "RUF012"]  # acentos em strings/comentários em português
+
+[tool.ruff.lint.flake8-bugbear]
+# Padrão do FastAPI: Depends/Query/Header como valor padrão de parâmetro
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Header"]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/*" = ["E501"]  # geradores de diagrama e relatório: linhas de desenho e de texto corrido
+"mvp/app/seed.py" = ["E501"]  # tabela de dados de demonstração, uma linha por registro
+"tests/test_mvp.py" = ["E402"]  # configura o ambiente antes de importar o aplicativo

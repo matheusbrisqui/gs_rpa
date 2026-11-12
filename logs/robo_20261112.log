@@ -1,0 +1,62 @@
+2026-11-12 20:16:13 | INFO    | 20261112T201613 | Início da execução | API http://127.0.0.1:8000
+2026-11-12 20:16:15 | INFO    | 20261112T201613 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-12 20:16:15 | INFO    | 20261112T201613 | Arquivo de retorno retorno_prefeitura_20261112.csv: 4 linha(s) válida(s), 1 com problema
+2026-11-12 20:16:15 | WARNING | 20261112T201613 | Arquivo retorno_prefeitura_20261112.csv, linha 6: situação desconhecida 'FECHADO'
+2026-11-12 20:16:15 | INFO    | 20261112T201613 | Protocolo SP156-2026-000101 concluído em 2026-11-11: relato #1 marcado como resolvido
+2026-11-12 20:16:15 | WARNING | 20261112T201613 | Protocolo SP156-2026-000110 indeferido pela prefeitura: requer revisão humana
+2026-11-12 20:16:15 | WARNING | 20261112T201613 | Protocolo SP156-2026-999999 concluído, mas não há relato com esse protocolo
+2026-11-12 20:16:15 | ERROR   | 20261112T201613 | Arquivo de retorno retorno_prefeitura_20261112_corrompido.csv rejeitado (cabeçalho inesperado: id,status). Movido para rejeitados/retorno_prefeitura_20261112_corrompido.csv
+2026-11-12 20:16:15 | INFO    | 20261112T201613 | Triagem: 9 relato(s) novo(s), 3 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-12 20:16:16 | INFO    | 20261112T201613 | Relato #6 (poste_obstaculo): encaminhado | prioridade alta (R1) | protocolo PL-20261112-00006
+2026-11-12 20:16:17 | INFO    | 20261112T201613 | Relato #2 (carro_na_calcada): encaminhado | prioridade alta (R1) | protocolo PL-20261112-00002
+2026-11-12 20:16:18 | INFO    | 20261112T201613 | Relato #9 (degrau_sem_rampa): encaminhado | prioridade media (R2) | protocolo PL-20261112-00009
+2026-11-12 20:16:19 | INFO    | 20261112T201613 | Relato #11 (degrau_sem_rampa): encaminhado | prioridade alta (R1) | protocolo PL-20261112-00011
+2026-11-12 20:16:19 | INFO    | 20261112T201613 | Relato #12 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-12 20:16:19 | INFO    | 20261112T201613 | Relato #13 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-12 20:16:19 | WARNING | 20261112T201613 | Relato #14 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-12 20:16:20 | INFO    | 20261112T201613 | Relato #15 (iluminacao): encaminhado | prioridade media (R2) | protocolo PL-20261112-00015
+2026-11-12 20:16:21 | INFO    | 20261112T201613 | Relato #16 (entulho_lixo): encaminhado | prioridade normal (R3) | protocolo PL-20261112-00016
+2026-11-12 20:16:21 | INFO    | 20261112T201613 | Lote de chamados gravado: chamados_20261112T201613.csv (6 linha(s))
+2026-11-12 20:16:21 | INFO    | 20261112T201613 | Fim da execução | situação=sucesso_com_falhas | lidos=9 encaminhados=6 duplicados=2 inválidos=1 falhas=0 | retornos resolvidos=1 | resumo em resumo_20261112T201613.json
+2026-11-12 20:20:30 | INFO    | 20261112T202030 | Início da execução | API http://127.0.0.1:8000
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Arquivo de retorno retorno_prefeitura_20261112.csv: 4 linha(s) válida(s), 1 com problema
+2026-11-12 20:20:31 | WARNING | 20261112T202030 | Arquivo retorno_prefeitura_20261112.csv, linha 6: situação desconhecida 'FECHADO'
+2026-11-12 20:20:31 | WARNING | 20261112T202030 | Protocolo SP156-2026-000110 indeferido pela prefeitura: requer revisão humana
+2026-11-12 20:20:31 | WARNING | 20261112T202030 | Protocolo SP156-2026-999999 concluído, mas não há relato com esse protocolo
+2026-11-12 20:20:31 | ERROR   | 20261112T202030 | Arquivo de retorno retorno_prefeitura_20261112_corrompido.csv rejeitado (cabeçalho inesperado: id,status). Movido para rejeitados/retorno_prefeitura_20261112_corrompido_20261112T202030.csv
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Triagem: 6 relato(s) novo(s), 9 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Relato #17 (degrau_sem_rampa): duplicado do relato #11 (a 0 m)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Relato #18 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Relato #19 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-12 20:20:31 | WARNING | 20261112T202030 | Relato #20 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Relato #21 (iluminacao): duplicado do relato #15 (a 0 m)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Relato #22 (entulho_lixo): duplicado do relato #16 (a 0 m)
+2026-11-12 20:20:31 | INFO    | 20261112T202030 | Fim da execução | situação=sucesso_com_falhas | lidos=6 encaminhados=0 duplicados=5 inválidos=1 falhas=0 | retornos resolvidos=0 | resumo em resumo_20261112T202030.json
+2026-11-12 20:25:01 | INFO    | 20261112T202501 | Início da execução | API http://127.0.0.1:8000
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Arquivo de retorno retorno_prefeitura_20261112.csv: 4 linha(s) válida(s), 1 com problema
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Arquivo retorno_prefeitura_20261112.csv, linha 6: situação desconhecida 'FECHADO'
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Protocolo SP156-2026-000110 indeferido pela prefeitura: requer revisão humana
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Protocolo SP156-2026-999999 concluído, mas não há relato com esse protocolo
+2026-11-12 20:25:02 | ERROR   | 20261112T202501 | Arquivo de retorno retorno_prefeitura_20261112_corrompido.csv rejeitado (cabeçalho inesperado: id,status). Movido para rejeitados/retorno_prefeitura_20261112_corrompido_20261112T202501.csv
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Triagem: 18 relato(s) novo(s), 9 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #23 (degrau_sem_rampa): duplicado do relato #11 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #24 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #25 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Relato #26 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #27 (iluminacao): duplicado do relato #15 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #28 (entulho_lixo): duplicado do relato #16 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #29 (degrau_sem_rampa): duplicado do relato #11 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #30 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #31 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Relato #32 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #33 (iluminacao): duplicado do relato #15 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #34 (entulho_lixo): duplicado do relato #16 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #35 (degrau_sem_rampa): duplicado do relato #11 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #36 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #37 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-12 20:25:02 | WARNING | 20261112T202501 | Relato #38 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #39 (iluminacao): duplicado do relato #15 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Relato #40 (entulho_lixo): duplicado do relato #16 (a 0 m)
+2026-11-12 20:25:02 | INFO    | 20261112T202501 | Fim da execução | situação=sucesso_com_falhas | lidos=18 encaminhados=0 duplicados=15 inválidos=3 falhas=0 | retornos resolvidos=0 | resumo em resumo_20261112T202501.json

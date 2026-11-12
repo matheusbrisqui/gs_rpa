@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passo Livre</title>
+  <meta name="description" content="Mapa colaborativo de obstáculos em calçadas e pontos de ônibus, com triagem e encaminhamento automáticos à prefeitura.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">♿</span>
+      <div>
+        <h1>Passo Livre</h1>
+        <p class="sub">Calçadas e pontos de ônibus acessíveis, em São Paulo</p>
+      </div>
+    </div>
+    <nav aria-label="Seções do aplicativo">
+      <div role="tablist" class="abas">
+        <button role="tab" id="tab-mapa" aria-controls="painel-mapa" aria-selected="true" data-aba="mapa">Mapa</button>
+        <button role="tab" id="tab-relatar" aria-controls="painel-relatar" aria-selected="false" tabindex="-1" data-aba="relatar">Relatar</button>
+        <button role="tab" id="tab-chamados" aria-controls="painel-chamados" aria-selected="false" tabindex="-1" data-aba="chamados">Chamados</button>
+        <button role="tab" id="tab-painel" aria-controls="painel-painel" aria-selected="false" tabindex="-1" data-aba="painel">Painel</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="layout">
+    <section class="mapa-wrap" aria-label="Mapa de obstáculos">
+      <div id="mapa" role="application" aria-label="Mapa com obstáculos relatados e pontos de ônibus. As mesmas informações estão nas listas ao lado."></div>
+      <div class="legenda" aria-label="Legenda do mapa">
+        <span><i class="dot buraco"></i>Buraco</span>
+        <span><i class="dot carro_na_calcada"></i>Carro na calçada</span>
+        <span><i class="dot entulho_lixo"></i>Entulho/lixo</span>
+        <span><i class="dot poste_obstaculo"></i>Poste/obstáculo</span>
+        <span><i class="dot degrau_sem_rampa"></i>Degrau sem rampa</span>
+        <span><i class="dot iluminacao"></i>Iluminação</span>
+        <span><i class="dot outro"></i>Outro</span>
+        <span><i class="dot ponto"></i>Ponto de ônibus</span>
+      </div>
+    </section>
+
+    <aside class="lateral">
+      <!-- MAPA -->
+      <section role="tabpanel" id="painel-mapa" aria-labelledby="tab-mapa" class="painel ativo">
+        <h2>Obstáculos no mapa</h2>
+        <div class="filtros">
+          <label>Tipo
+            <select id="f-tipo">
+              <option value="">Todos</option>
+              <option value="buraco">Buraco</option>
+              <option value="carro_na_calcada">Carro na calçada</option>
+              <option value="entulho_lixo">Entulho/lixo</option>
+              <option value="poste_obstaculo">Poste/obstáculo</option>
+              <option value="degrau_sem_rampa">Degrau sem rampa</option>
+              <option value="iluminacao">Iluminação</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
+          <label>Situação
+            <select id="f-status">
+              <option value="ativos">Em aberto</option>
+              <option value="">Todas</option>
+              <option value="novo">Novo</option>
+              <option value="validado">Validado</option>
+              <option value="encaminhado">Encaminhado</option>
+              <option value="resolvido">Resolvido</option>
+              <option value="duplicado">Duplicado</option>
+              <option value="invalido">Inválido</option>
+            </select>
+          </label>
+        </div>
+        <p id="resumo-mapa" class="info" aria-live="polite"></p>
+        <h3>Lista de relatos</h3>
+        <ul id="lista-relatos" class="lista"></ul>
+      </section>
+
+      <!-- RELATAR -->
+      <section role="tabpanel" id="painel-relatar" aria-labelledby="tab-relatar" class="painel" hidden>
+        <h2>Relatar um obstáculo</h2>
+        <form id="form-relato" novalidate>
+          <label for="tipo">Tipo de obstáculo <span aria-hidden="true">*</span></label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione</option>
+            <option value="buraco">Buraco</option>
+            <option value="carro_na_calcada">Carro na calçada</option>
+            <option value="entulho_lixo">Entulho/lixo</option>
+            <option value="poste_obstaculo">Poste/obstáculo fixo</option>
+            <option value="degrau_sem_rampa">Degrau sem rampa</option>
+            <option value="iluminacao">Iluminação insuficiente</option>
+            <option value="outro">Outro</option>
+          </select>
+
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="3" maxlength="1000" placeholder="Ex.: buraco no meio da calçada, não dá para passar de cadeira"></textarea>
+
+          <fieldset>
+            <legend>Localização <span aria-hidden="true">*</span></legend>
+            <div class="linha">
+              <label>Latitude <input id="lat" name="lat" type="number" step="any" required></label>
+              <label>Longitude <input id="lon" name="lon" type="number" step="any" required></label>
+            </div>
+            <div class="linha botoes">
+              <button type="button" id="btn-geo" class="sec">Usar minha localização</button>
+              <button type="button" id="btn-mapa-relato" class="sec" aria-pressed="false">Escolher no mapa</button>
+            </div>
+          </fieldset>
+
+          <label for="perfil">Eu sou</label>
+          <select id="perfil" name="perfil">
+            <option value="pcd">Pessoa com deficiência</option>
+            <option value="idoso">Pessoa idosa</option>
+            <option value="responsavel_carrinho">Responsável com carrinho</option>
+            <option value="outro" selected>Outro</option>
+          </select>
+
+          <label for="identificador">E-mail para acompanhar (opcional)</label>
+          <input id="identificador" name="identificador" type="email" autocomplete="email">
+          <p class="lgpd">
+            <strong>Privacidade (LGPD):</strong> guardamos só o tipo, a descrição, a posição e a data do relato.
+            Seu e-mail vira um código embaralhado (hash) e não é armazenado. O perfil informado serve apenas para definir a prioridade e não é enviado à prefeitura.
+          </p>
+
+          <button type="submit" class="pri">Enviar relato</button>
+          <p id="msg-relato" class="info" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- CHAMADOS -->
+      <section role="tabpanel" id="painel-chamados" aria-labelledby="tab-chamados" class="painel" hidden>
+        <div class="cabecalho-chamados">
+          <div>
+            <h2>Acompanhamento dos chamados</h2>
+            <p class="info">
+              Todo relato entra como <strong>novo</strong>. A automação confere os dados, descarta repetidos, define a prioridade,
+              gera o protocolo e encaminha à prefeitura. Quando a prefeitura conclui o serviço, o relato passa a <strong>resolvido</strong>.
+            </p>
+          </div>
+          <div class="acoes-chamados">
+            <label>Situação
+              <select id="c-status">
+                <option value="">Todas</option>
+                <option value="novo">Novo (aguardando a automação)</option>
+                <option value="encaminhado">Encaminhado</option>
+                <option value="validado">Validado</option>
+                <option value="resolvido">Resolvido</option>
+                <option value="duplicado">Duplicado</option>
+                <option value="invalido">Inválido</option>
+              </select>
+            </label>
+            <button type="button" id="btn-atualizar" class="sec">Atualizar agora</button>
+          </div>
+        </div>
+        <div id="contadores" class="contadores" aria-live="polite"></div>
+        <div class="tabela-wrap" tabindex="0" role="region" aria-label="Tabela de chamados">
+          <table id="tabela-chamados">
+            <caption class="sr-only">Relatos e o resultado da triagem automática</caption>
+            <thead>
+              <tr>
+                <th scope="col">Relato</th>
+                <th scope="col">Obstáculo</th>
+                <th scope="col">Situação</th>
+                <th scope="col">Prioridade</th>
+                <th scope="col">Protocolo</th>
+                <th scope="col">Observação</th>
+                <th scope="col">Registrado</th>
+                <th scope="col">Última atualização</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p id="atualizado-chamados" class="info" aria-live="off"></p>
+      </section>
+
+      <!-- PAINEL -->
+      <section role="tabpanel" id="painel-painel" aria-labelledby="tab-painel" class="painel" hidden>
+        <h2>Indicadores</h2>
+        <div id="cards" class="cards"></div>
+        <h3>Relatos por situação</h3>
+        <div id="barras-status" class="barras"></div>
+        <h3>Chamados por prioridade</h3>
+        <div id="barras-prioridade" class="barras"></div>
+        <h3>Relatos por tipo de obstáculo</h3>
+        <div id="barras-tipo" class="barras"></div>
+        <p id="gerado-em" class="info"></p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    FIAP · Global Solution 2026.2 · CitizenTech · ODS 10 e 11 ·
+    <a href="/docs">API</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

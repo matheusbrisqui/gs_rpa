@@ -1,0 +1,29 @@
+# Segredos: nunca vão para o repositório
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Banco local do aplicativo
+*.db
+*.sqlite
+
+# Arquivos de trabalho do robô (as amostras ficam em logs/ e tests/evidencias/)
+saida/
+entrada/*
+!entrada/.gitkeep
+logs/.robo.lock
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

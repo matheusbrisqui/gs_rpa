@@ -1,0 +1,7 @@
+﻿protocolo;relato_id;tipo;prioridade;regra_prioridade;latitude;longitude;endereco;ponto_onibus_codigo;ponto_onibus_nome;distancia_ponto_m;relatado_em;encaminhado_em
+PL-20261111-00006;6;poste_obstaculo;alta;R1;-23.543700;-46.642300;Praça da República, 176 - República;340015370;Praça da República;30;2026-11-09T09:06:00.034785Z;2026-11-11T12:06:39-03:00
+PL-20261111-00002;2;carro_na_calcada;alta;R1;-23.562100;-46.655200;Avenida Paulista, 1488 - Morro dos Ingleses;340015332;Av. Paulista - Trianon;23;2026-11-10T11:06:00.034443Z;2026-11-11T12:06:39-03:00
+PL-20261111-00009;9;degrau_sem_rampa;media;R2;-23.561000;-46.657000;Ciclovia da Avenida Paulista - Jardim Paulista;;;;2026-11-11T10:06:00.035238Z;2026-11-11T12:06:39-03:00
+PL-20261111-00011;11;degrau_sem_rampa;alta;R1;-23.561350;-46.655850;Avenida Paulista, 1578 - Cerqueira César;340015329;Av. Paulista - MASP;0;2026-11-11T15:06:13.368616Z;2026-11-11T12:06:39-03:00
+PL-20261111-00015;15;iluminacao;media;R2;-23.572500;-46.641500;Rua Visconde de Nova Granada - Morro dos Ingleses;;;;2026-11-11T15:06:13.448781Z;2026-11-11T12:06:39-03:00
+PL-20261111-00016;16;entulho_lixo;normal;R3;-23.574000;-46.639000;Rua do Paraíso, 442 - Paraíso;;;;2026-11-11T15:06:13.465344Z;2026-11-11T12:06:39-03:00

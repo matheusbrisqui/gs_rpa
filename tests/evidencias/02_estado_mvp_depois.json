@@ -1,0 +1,130 @@
+[
+ {
+  "id": 1,
+  "tipo": "buraco",
+  "status": "resolvido",
+  "prioridade": "alta",
+  "protocolo": "SP156-2026-000101",
+  "duplicado_de": null
+ },
+ {
+  "id": 2,
+  "tipo": "carro_na_calcada",
+  "status": "encaminhado",
+  "prioridade": "alta",
+  "protocolo": "PL-20261111-00002",
+  "duplicado_de": null
+ },
+ {
+  "id": 3,
+  "tipo": "degrau_sem_rampa",
+  "status": "validado",
+  "prioridade": "alta",
+  "protocolo": null,
+  "duplicado_de": null
+ },
+ {
+  "id": 4,
+  "tipo": "entulho_lixo",
+  "status": "resolvido",
+  "prioridade": "media",
+  "protocolo": "SP156-2026-000088",
+  "duplicado_de": null
+ },
+ {
+  "id": 5,
+  "tipo": "iluminacao",
+  "status": "encaminhado",
+  "prioridade": "media",
+  "protocolo": "SP156-2026-000095",
+  "duplicado_de": null
+ },
+ {
+  "id": 6,
+  "tipo": "poste_obstaculo",
+  "status": "encaminhado",
+  "prioridade": "alta",
+  "protocolo": "PL-20261111-00006",
+  "duplicado_de": null
+ },
+ {
+  "id": 7,
+  "tipo": "buraco",
+  "status": "resolvido",
+  "prioridade": "normal",
+  "protocolo": "SP156-2026-000070",
+  "duplicado_de": null
+ },
+ {
+  "id": 8,
+  "tipo": "carro_na_calcada",
+  "status": "encaminhado",
+  "prioridade": "normal",
+  "protocolo": "SP156-2026-000110",
+  "duplicado_de": null
+ },
+ {
+  "id": 9,
+  "tipo": "degrau_sem_rampa",
+  "status": "encaminhado",
+  "prioridade": "media",
+  "protocolo": "PL-20261111-00009",
+  "duplicado_de": null
+ },
+ {
+  "id": 10,
+  "tipo": "entulho_lixo",
+  "status": "resolvido",
+  "prioridade": "normal",
+  "protocolo": "SP156-2026-000080",
+  "duplicado_de": null
+ },
+ {
+  "id": 11,
+  "tipo": "degrau_sem_rampa",
+  "status": "encaminhado",
+  "prioridade": "alta",
+  "protocolo": "PL-20261111-00011",
+  "duplicado_de": null
+ },
+ {
+  "id": 12,
+  "tipo": "degrau_sem_rampa",
+  "status": "duplicado",
+  "prioridade": null,
+  "protocolo": null,
+  "duplicado_de": 11
+ },
+ {
+  "id": 13,
+  "tipo": "iluminacao",
+  "status": "duplicado",
+  "prioridade": null,
+  "protocolo": null,
+  "duplicado_de": 5
+ },
+ {
+  "id": 14,
+  "tipo": "entulho_lixo",
+  "status": "invalido",
+  "prioridade": null,
+  "protocolo": null,
+  "duplicado_de": null
+ },
+ {
+  "id": 15,
+  "tipo": "iluminacao",
+  "status": "encaminhado",
+  "prioridade": "media",
+  "protocolo": "PL-20261111-00015",
+  "duplicado_de": null
+ },
+ {
+  "id": 16,
+  "tipo": "entulho_lixo",
+  "status": "encaminhado",
+  "prioridade": "normal",
+  "protocolo": "PL-20261111-00016",
+  "duplicado_de": null
+ }
+]

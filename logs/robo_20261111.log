@@ -1,0 +1,44 @@
+2026-11-11 12:06:39 | INFO    | 20261111T120639 | Início da execução | API http://127.0.0.1:8000
+2026-11-11 12:06:40 | INFO    | 20261111T120639 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-11 12:06:40 | INFO    | 20261111T120639 | Arquivo de retorno retorno_prefeitura_20261111.csv: 4 linha(s) válida(s), 1 com problema
+2026-11-11 12:06:40 | WARNING | 20261111T120639 | Arquivo retorno_prefeitura_20261111.csv, linha 6: situação desconhecida 'FECHADO'
+2026-11-11 12:06:40 | INFO    | 20261111T120639 | Protocolo SP156-2026-000101 concluído em 2026-11-10: relato #1 marcado como resolvido
+2026-11-11 12:06:40 | WARNING | 20261111T120639 | Protocolo SP156-2026-000110 indeferido pela prefeitura: requer revisão humana
+2026-11-11 12:06:40 | WARNING | 20261111T120639 | Protocolo SP156-2026-999999 concluído, mas não há relato com esse protocolo
+2026-11-11 12:06:40 | ERROR   | 20261111T120639 | Arquivo de retorno retorno_prefeitura_20261111_corrompido.csv rejeitado (cabeçalho inesperado: id,status). Movido para rejeitados/retorno_prefeitura_20261111_corrompido.csv
+2026-11-11 12:06:40 | INFO    | 20261111T120639 | Triagem: 9 relato(s) novo(s), 3 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-11 12:06:40 | INFO    | 20261111T120639 | Relato #6 (poste_obstaculo): encaminhado | prioridade alta (R1) | protocolo PL-20261111-00006
+2026-11-11 12:06:41 | INFO    | 20261111T120639 | Relato #2 (carro_na_calcada): encaminhado | prioridade alta (R1) | protocolo PL-20261111-00002
+2026-11-11 12:06:42 | INFO    | 20261111T120639 | Relato #9 (degrau_sem_rampa): encaminhado | prioridade media (R2) | protocolo PL-20261111-00009
+2026-11-11 12:06:43 | INFO    | 20261111T120639 | Relato #11 (degrau_sem_rampa): encaminhado | prioridade alta (R1) | protocolo PL-20261111-00011
+2026-11-11 12:06:43 | INFO    | 20261111T120639 | Relato #12 (degrau_sem_rampa): duplicado do relato #11 (a 6 m)
+2026-11-11 12:06:43 | INFO    | 20261111T120639 | Relato #13 (iluminacao): duplicado do relato #5 (a 8 m)
+2026-11-11 12:06:43 | WARNING | 20261111T120639 | Relato #14 (entulho_lixo): inválido (fora_da_area_atendida)
+2026-11-11 12:06:44 | INFO    | 20261111T120639 | Relato #15 (iluminacao): encaminhado | prioridade media (R2) | protocolo PL-20261111-00015
+2026-11-11 12:06:45 | INFO    | 20261111T120639 | Relato #16 (entulho_lixo): encaminhado | prioridade normal (R3) | protocolo PL-20261111-00016
+2026-11-11 12:06:45 | INFO    | 20261111T120639 | Lote de chamados gravado: chamados_20261111T120639.csv (6 linha(s))
+2026-11-11 12:06:45 | INFO    | 20261111T120639 | Fim da execução | situação=sucesso_com_falhas | lidos=9 encaminhados=6 duplicados=2 inválidos=1 falhas=0 | retornos resolvidos=1 | resumo em resumo_20261111T120639.json
+2026-11-11 12:07:07 | INFO    | 20261111T120707 | Início da execução | API http://127.0.0.1:8000
+2026-11-11 12:07:08 | INFO    | 20261111T120707 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-11 12:07:08 | INFO    | 20261111T120707 | Nenhum arquivo de retorno da prefeitura em entrada; etapa ignorada
+2026-11-11 12:07:08 | INFO    | 20261111T120707 | Triagem: 0 relato(s) novo(s), 9 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-11 12:07:08 | INFO    | 20261111T120707 | Nenhum relato novo para processar
+2026-11-11 12:07:08 | INFO    | 20261111T120707 | Fim da execução | situação=sucesso | lidos=0 encaminhados=0 duplicados=0 inválidos=0 falhas=0 | retornos resolvidos=0 | resumo em resumo_20261111T120707.json
+2026-11-11 12:07:11 | INFO    | 20261111T120711 | Início da execução | API http://127.0.0.1:9
+2026-11-11 12:07:14 | WARNING | 20261111T120711 | GET /health falhou (ConnectError). Tentativa 1 de 3; nova tentativa em 2.0s
+2026-11-11 12:07:18 | WARNING | 20261111T120711 | GET /health falhou (ConnectError). Tentativa 2 de 3; nova tentativa em 4.0s
+2026-11-11 12:07:24 | ERROR   | 20261111T120711 | Execução abortada: API do MVP indisponível (GET /health: ConnectError após 3 tentativa(s))
+2026-11-11 12:07:24 | INFO    | 20261111T120711 | Fim da execução | situação=abortado | lidos=0 encaminhados=0 duplicados=0 inválidos=0 falhas=0 | retornos resolvidos=0 | resumo em resumo_20261111T120711.json
+2026-11-11 12:07:26 | INFO    | 20261111T120726 | Início da execução | API http://127.0.0.1:8000
+2026-11-11 12:07:28 | INFO    | 20261111T120726 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-11 12:07:28 | INFO    | 20261111T120726 | Nenhum arquivo de retorno da prefeitura em entrada; etapa ignorada
+2026-11-11 12:07:28 | INFO    | 20261111T120726 | Triagem: 1 relato(s) novo(s), 9 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-11 12:07:28 | ERROR   | 20261111T120726 | Execução abortada: HTTP 401: token de automação recusado; confira AUTOMATION_TOKEN. Nenhum relato foi alterado por esta falha.
+2026-11-11 12:07:28 | INFO    | 20261111T120726 | Fim da execução | situação=abortado | lidos=1 encaminhados=0 duplicados=0 inválidos=0 falhas=1 | retornos resolvidos=0 | resumo em resumo_20261111T120726.json
+2026-11-11 12:07:30 | INFO    | 20261111T120730 | Início da execução | API http://127.0.0.1:8000
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | API do MVP disponível (Passo Livre API 1.0.0)
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | Nenhum arquivo de retorno da prefeitura em entrada; etapa ignorada
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | Triagem: 1 relato(s) novo(s), 9 em aberto para comparação, 8 ponto(s) de ônibus
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | Relato #17 (buraco): encaminhado | prioridade normal (R3) | protocolo PL-20261111-00017
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | Lote de chamados gravado: chamados_20261111T120730.csv (1 linha(s))
+2026-11-11 12:07:32 | INFO    | 20261111T120730 | Fim da execução | situação=sucesso | lidos=1 encaminhados=1 duplicados=0 inválidos=0 falhas=0 | retornos resolvidos=0 | resumo em resumo_20261111T120730.json

@@ -1,0 +1,25 @@
+{
+  "execucao": "20261112T202030",
+  "inicio": "2026-11-12T20:20:30-03:00",
+  "fim": "2026-11-12T20:20:31-03:00",
+  "situacao": "sucesso_com_falhas",
+  "relatos_lidos": 6,
+  "encaminhados": 0,
+  "duplicados": 5,
+  "invalidos": 1,
+  "falhas": 0,
+  "prioridades": {
+    "alta": 0,
+    "media": 0,
+    "normal": 0
+  },
+  "sem_endereco": 0,
+  "retorno_arquivos_lidos": 1,
+  "retorno_arquivos_rejeitados": 1,
+  "retorno_linhas_invalidas": 1,
+  "retorno_resolvidos": 0,
+  "retorno_sem_relato": 1,
+  "retorno_indeferidos": 1,
+  "arquivo_chamados": null,
+  "erros": []
+}
