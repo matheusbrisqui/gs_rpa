@@ -9,7 +9,7 @@ Gustavo Brisqui Martinez | 97969
 Guilherme Rezende Bezerra | 98508
 Matheus Brisqui Martinez | 97892
 
-- **Vídeo demonstrativo (até 3 minutos):** 
+- **Vídeo demonstrativo (até 3 minutos):** https://youtu.be/YhshC8PUqW4
 - **Repositório:** https://github.com/matheusbrisqui/gs_rpa
 
 Relatório técnico: [`docs/relatorio_tecnico_rpa.pdf`](docs/relatorio_tecnico_rpa.pdf)
